@@ -1,0 +1,158 @@
+
+body {
+    background-color: rgb(136, 142, 143);
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+    line-height: 1.5em;
+}
+h1 {
+    font-family: 'Lobster';
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #004AAD;
+    line-height: 1.3em;
+    text-align: center;
+}
+h2 {
+    font-family: 'Lobster';
+    font-size: 1.6rem;
+    color: #004AAD;
+    line-height: 1.2em;
+    text-align: center;
+}
+h3 {
+    font-family: 'Lobster';
+    font-size: 1.4rem;
+    line-height: 1.2em;
+}
+p {
+    font-family: 'Roboto';
+    margin-bottom: 1.5em;
+}
+.container {
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+    
+}
+.header {
+    background-color: #144777;
+    padding: 1.2rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.logo_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    padding-right: 0.0em;
+    max-width: 95%;
+}
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu ul li {
+    display: inline-block;
+    width: 125px;
+}
+.menu ul li a {
+    font-family: 'Lobster';
+    font-size: 1.5rem;
+    color: #bdeb89;
+    display: block;
+    padding: 1.3rem 0.5rem;
+    border-radius: 6px;
+    transition: all 0.5s linear;
+    text-decoration: none;
+    text-align: center;
+    border: cadetblue solid 1px;
+}
+/* Color del efecto al pasar por la barra de navegación */
+.menu ul li a:hover {
+    background: #693c92; 
+    border: crimson solid 2px;
+}
+.contenido {
+    padding-top: 9rem;
+}
+.banner {
+    margin: 100px;
+    display: flex;
+}
+.galeria {
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+}
+/*iconos de productos*/
+.item {
+    margin: 1.5em;
+    width: 60%;
+    background-color: rgb(159, 217, 228);
+    box-shadow: 0 0 10px 0 rgb(139, 95, 160);
+    cursor: pointer;
+    transition: all 0.3s linear;
+    
+}
+/* Efecto de aumentar la escala al pasar por la imagen **/
+.item:hover {
+    transform: scale(1.2); 
+}
+.item_pic {
+    max-width: 100%;
+    display: block;
+    align-content: center;
+    margin-left: 30%;
+   
+}
+.item_txt {
+    font-family: 'Lobster';
+    font-size: 1.5rem;
+    color: #3e85be;
+    text-align: center;
+    padding: 1rem;
+    margin: 0 auto;
+    line-height: 1em;
+}
+
+.form_container {
+    margin-top: 10rem;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    line-height: 6em;
+}
+.formulario {
+    
+    display: flex;
+    justify-content:center;
+    align-items:center;
+
+    
+}
+.footer {
+    margin-top: 2rem;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1em;
+}
+.centrar {
+    text-align: center;
+}
+#ini {
+    display: block; /*Mostrar por defecto*/
+}
+#produc, #contac {
+    display: none; /*Ocultar por defecto*/
+}
