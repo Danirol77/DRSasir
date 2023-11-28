@@ -1,12 +1,146 @@
+<!DOCTYPE html>
+<!--
+ACTIVIDAD 2 LDM ASIR 2022/2023
+AUTOR DANIEL ROLDAN SAYAGO
+-->
 <html>
-  <head>
-      <title>
-        DRSASIR
-      </title>
-  </head>
-<body>
-  <h1> DRSASIR PROYECTO </h1>
-</body>
-
-  
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>LLegayaSL</title>
+		<link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+	</head>	
+	<body>
+		<header class="header">
+			<div class="logo_menu container">
+				<!--Logotipo con enlace a Inicio-->
+				<div class="logo">
+					<a href="#" onclick="return ShowContent('ini');"><img src="images/logo.png" alt="LLegayaSL"/>
+					</a>
+				</div>
+            	<!--Menú de navegación con acceso al contenido a traves de javascript-->
+				<nav class="menu">
+					<ul>
+						<li><a href="#" onclick="return ShowContent('ini');">Inicio</a></li>
+						<li><a href="#" onclick="return ShowContent('produc');">Productos</a></li>
+						<li><a href="#" onclick="return ShowContent('contac');">Contacto</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section class="contenido container">
+			<!--Sección Inicio-->
+			<div id="ini">
+				<img class="banner" src="images/banner.png" alt="LLegayaSL"/>
+				<h1>Nuestra empresa</h1>
+				<p>
+					LLegaya S.L. es una empresa comprometida con el medio ambiente. Encontrarás en nosotros tu empresa de confianza con vehiculos 100%
+                    ecologicos y seguros.  
+				</p>
+				<p>
+                    Tenemos una amplia oferta en servicios de paqueteria. 
+				</p>
+				<h2>Podrán encontrar</h2>
+				<!--Lista de productos  lista ordenada a dos niveles-->
+				<ol type="1">
+					<li>Servicios</li>
+						<ol type="a">
+							<li>Trasporte Urgente</li>
+							<li>Trasporte Ordinario</li>
+						</ol>
+					<li>Productos</li>
+						<ol type="a">
+							<li>Paquetes</li>
+							<li>Sobres</li>
+						</ol>
+				</ol>
+			</div>
+			<!--Sección Productos-->
+			<div id="produc">
+				<h1>Productos</h1>
+				<!--Galería de productos -->
+				<div class="galeria">
+					<div class="item">
+						<img src="images/nacional.png" alt="nacional" class="item_pic">
+						<div class="item_txt">
+							<h3 id="tra_nac">Nacional</h3>
+							<p>Transporte Nacional</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="images/internacional.png" alt="internacional" class="item_pic">
+						<div class="item_txt">
+							<h3>Internacional</h3>
+							<p>Transporte Internacional Europa</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="images/express.png" alt="express" class="item_pic">
+						<div class="item_txt">
+							<h3>Transporte Express</h3>
+							<p>Transporte Express 10h</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="images/peligrosas.png" alt="peligrosas" class="item_pic">
+						<div class="item_txt">
+							<h3>Mercancias Peligrosas</h3>
+							<p>Transporte Mercancias Peligrosas</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--Sección contacto-->
+			<div id="contac">
+                
+				<div class="form_container">
+						<h1>Contacto</h1>
+				</div>
+								
+				<div class="formulario">
+						<form action="contacto.php" method="get">
+							Nombre: <input type="text" name="Nombre" placeholder="Nombre"></input> <br>
+							Apellidos: <input type="text" name="Apellidos" placeholder="Apellidos"></input> <br>
+							Correo electrónico: <input type="text" name="Correo electronico" placeholder="Correo electrónico"></input> <br>
+							Teléfono: <input type="tel" name="Telefono" placeholder="Teléfono"></input>
+								<br>
+							Comentarios:<br>
+							<textarea rows="4" cols="50" placeholder="Comentarios"></textarea> <br>
+							Desea recibir: <label><input type="radio" name="radio" value="yes" /> e-mail</label><br>
+							Contacto por: <label><input type="radio" name="radio" value="yes" /> Telefono</label><br>
+							<!--Botón sin funcionalidad-->
+							<button type="button">Enviar</button>
+						</form>
+				</div>	
+			</div>
+		</section>
+		<!--Script que muestra y oculta las diferentes capas o secciones de la web-->
+		<script type="text/javascript">
+			function ShowContent(content) {
+				document.getElementById("ini").style.display = 'none';
+				document.getElementById("produc").style.display = 'none';
+				document.getElementById("contac").style.display = 'none';
+				document.getElementById(content).style.display = 'block';
+			}
+		</script>
+		<!--Pié de página con información de licencia y datos de contacto-->
+		<footer class="footer container">
+			<hr/>
+			<p>
+				LLegaya S.L. <br>
+				Dirección: C/ Puente y Pellon 23 <br>
+				Teléfono: +34 556998772 <br>
+				e-mail: <a href="info@llegayasl.com">contacto@llegayasl.com</a> <br>
+			</p>
+			<p>
+				Diseño web: Daniel Roldan Sayago <br>
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.es">licencia de Creative Commons Reconocimiento 4.0 Internacional</a>
+			</p>
+		</footer>
+	</body>
 </html>
